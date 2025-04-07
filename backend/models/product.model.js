@@ -12,6 +12,7 @@ const quizSchema = new mongoose.Schema(
     },
     image: {
       type: String,
+      default: "noimage",
     },
   },
   { timestamps: true }

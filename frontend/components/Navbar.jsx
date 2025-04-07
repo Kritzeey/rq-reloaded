@@ -4,7 +4,7 @@ import { NotebookPen } from "lucide-react";
 
 export default function Navbar() {
   return (
-    <nav className="sticky top-0 w-full border-b backdrop-blur z-50">
+    <nav className="sticky top-0 w-full border-b backdrop-blur z-100">
       <div className="flex w-full items-center mx-auto max-w-6xl justify-between h-16">
         <div className="flex gap-4">
           <NotebookPen />
