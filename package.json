@@ -1,0 +1,30 @@
+{
+  "name": "rq-reloaded",
+  "version": "1.0.0",
+  "description": "Quiz App Reloaded",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon backend/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kritzeey/rq-reloaded.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/Kritzeey/rq-reloaded/issues"
+  },
+  "homepage": "https://github.com/Kritzeey/rq-reloaded#readme",
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^5.1.0",
+    "mongoose": "^8.13.2"
+  }
+}
