@@ -1,6 +1,7 @@
 import express from "express";
 import dotenv from "dotenv";
 import quizRoutes from "./routes/quiz.route.js";
+import connectDB from "./config/db.js";
 
 dotenv.config();
 app = express();
@@ -11,6 +12,8 @@ app.use("/api/quizzes", quizRoutes);
 
 const PORT = process.env.PORT || 5000;
 
-app.listen(PORT, (req, res) => {
-  console.log(`http://localhost:${PORT}/`);
-});
+connectDB().then(
+  app.listen(PORT, (req, res) => {
+    console.log(`http://localhost:${PORT}/`);
+  })
+);
