@@ -2,7 +2,7 @@ import Particles from "@/components/Particles";
 
 export default function Home() {
   return (
-    <div className="h-screen">
+    <div className="h-screen absolute top-0">
       <div className="h-full position-relative">
         <Particles
           particleColors={["#ffffff", "#ffffff"]}
