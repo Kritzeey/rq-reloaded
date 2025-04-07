@@ -1,4 +1,11 @@
 import express from "express";
+import {
+  fetchQuizzes,
+  fetchQuiz,
+  createQuiz,
+  updateQuiz,
+  deleteQuiz,
+} from "../controllers/product.controller";
 
 const router = express.Router();
 
