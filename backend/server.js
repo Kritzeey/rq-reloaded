@@ -4,7 +4,7 @@ import quizRoutes from "./routes/quiz.route.js";
 import connectDB from "./config/db.js";
 
 dotenv.config();
-app = express();
+const app = express();
 
 app.use(express.json());
 
