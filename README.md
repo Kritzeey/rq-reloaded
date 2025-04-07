@@ -17,6 +17,7 @@ Tech Stack
 
 Libraries
 - shadcn/ui
+- React Bits
 
 <br>
 
