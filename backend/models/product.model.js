@@ -8,12 +8,10 @@ const quizSchema = new mongoose.Schema(
     },
     description: {
       type: String,
-      required: true,
       default: "This quiz has no description",
     },
     image: {
       type: String,
-      required: true,
     },
   },
   { timestamps: true }
