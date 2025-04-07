@@ -55,7 +55,27 @@ export async function createQuiz(req, res) {
 }
 
 export async function updateQuiz(req, res) {
-  res.json({ message: "success" });
+  const { id } = req.params;
+
+  const quiz = req.body;
+
+  if (!quiz.title) {
+    return res
+      .status(400)
+      .json({ success: false, message: "Quiz title cannot be blank" });
+  }
+
+  try {
+    const updatedQuiz = await Quiz.findByIdAndUpdate(id, quiz, { new: true });
+    res.status(200).json({
+      success: true,
+      message: "Quiz updated successfully",
+      data: updatedQuiz,
+    });
+  } catch (error) {
+    console.error(error.message);
+    res.status(500).json({ success: false, message: "Error updating quiz" });
+  }
 }
 
 export async function deleteQuiz(req, res) {
