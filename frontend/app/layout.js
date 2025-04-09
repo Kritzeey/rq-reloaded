@@ -33,12 +33,7 @@ export default function RootLayout({ children }) {
         >
           <div className="min-h-screen">
             <Navbar />
-            <div className="grid grid-cols-4 gap-4 h-full w-full mx-auto max-w-6xl">
-              <div className="h-full col-span-1">
-                <Sidebar />
-              </div>
-              <div className="col-span-3">{children}</div>
-            </div>
+            {children}
           </div>
         </ThemeProvider>
       </body>
