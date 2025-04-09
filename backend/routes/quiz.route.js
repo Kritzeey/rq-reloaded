@@ -5,11 +5,13 @@ import {
   createQuiz,
   updateQuiz,
   deleteQuiz,
+  fetchQuizByName,
 } from "../controllers/product.controller.js";
 
 const router = express.Router();
 
 router.get("/", fetchQuizzes);
+router.get("/:title", fetchQuizByName);
 router.get("/:id", fetchQuiz);
 
 router.post("/", createQuiz);

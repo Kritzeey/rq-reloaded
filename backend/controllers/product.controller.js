@@ -30,6 +30,24 @@ export async function fetchQuiz(req, res) {
   }
 }
 
+export async function fetchQuizByName(req, res) {
+  const { title } = req.params;
+
+  try {
+    const quiz = await Quiz.find({
+      title: new RegExp(title, "i"),
+    });
+    res.status(200).json({
+      success: true,
+      message: "Quiz fetched successfully",
+      data: quiz,
+    });
+  } catch (error) {
+    console.error(error.message);
+    res.status(500).json({ success: false, message: "Error fetching quiz" });
+  }
+}
+
 export async function createQuiz(req, res) {
   const quiz = req.body;
 
