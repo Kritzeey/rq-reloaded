@@ -6,7 +6,7 @@ import {
   updateQuiz,
   deleteQuiz,
   fetchQuizByName,
-} from "../controllers/product.controller.js";
+} from "../controllers/quiz.controller.js";
 
 const router = express.Router();
 

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ModeToggle } from "./ModeToggle";
-import { NotebookPen } from "lucide-react";
+import { NotebookPen, PlusIcon } from "lucide-react";
+import { Button } from "./ui/button";
 
 export default function Navbar() {
   return (
@@ -12,7 +13,14 @@ export default function Navbar() {
             Ristek Quiz
           </Link>
         </div>
-        <ModeToggle />
+        <div className="flex gap-4">
+          <Link href="/create">
+            <Button size="icon" variant="outline">
+              <PlusIcon />
+            </Button>
+          </Link>
+          <ModeToggle />
+        </div>
       </div>
     </nav>
   );

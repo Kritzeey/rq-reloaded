@@ -1,4 +1,4 @@
-import Quiz from "../models/product.model.js";
+import Quiz from "../models/quiz.model.js";
 
 export async function fetchQuizzes(req, res) {
   try {

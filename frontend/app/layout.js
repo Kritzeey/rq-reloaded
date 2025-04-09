@@ -34,6 +34,7 @@ export default function RootLayout({ children }) {
           <div className="min-h-screen">
             <Navbar />
             {children}
+            <Toaster />
           </div>
         </ThemeProvider>
       </body>

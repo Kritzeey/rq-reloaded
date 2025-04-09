@@ -11,7 +11,6 @@ export default function Home() {
   async function fetchQuizzes() {
     const quizzes = await axios.get("http://localhost:5000/api/quizzes");
     setQuizzes(quizzes.data.data);
-    console.log(quizzes.data.data);
   }
 
   async function filterQuizzes(e) {
@@ -35,17 +34,21 @@ export default function Home() {
     fetchQuizzes();
   }, []);
 
-  console.log(quizzes);
-
   return (
     <div className="grid grid-cols-4 gap-4 h-full w-full mx-auto max-w-6xl">
       <div className="h-full col-span-1">
         <Sidebar handleChange={filterQuizzes} />
       </div>
       <div className="gap-4 z-50 w-full grid col-span-3 grid-cols-3">
-        {quizzes.map((quiz) => (
-          <Card key={quiz._id} title={quiz.title} image={quiz.image} />
-        ))}
+        {quizzes.length !== 0 ? (
+          quizzes.map((quiz) => (
+            <Card key={quiz._id} title={quiz.title} image={quiz.image} />
+          ))
+        ) : (
+          <div className="col-span-3 mt-4 flex items-center justify-center z-50">
+            No quizzes found!
+          </div>
+        )}
       </div>
     </div>
   );
